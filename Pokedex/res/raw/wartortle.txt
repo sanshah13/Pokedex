@@ -1,0 +1,8 @@
+008
+Wartortle
+WATER
+59:63:80:65:80:58
+007 Squritle:008 Wartortle:009 Blastoise
+Torrent:Rain Dish
+Tackle:Tail Whip:Water Gun:Withdraw:Bubble:Bite:Rapid Spin:Protect:Water Pulse:Aqua Tail:Skull Bash:Iron Defense:Rain Dance:Hydro Pump
+When tapped, this Pokemon will pull in its head, but its tail will still stick out a little bit.

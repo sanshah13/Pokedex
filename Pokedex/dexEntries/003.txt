@@ -1,0 +1,8 @@
+003
+Venusaur
+GRASS:POISON
+80:82:83:100:100:80
+001 Bulbasaur:002 Ivysaur
+Overgrow:Chlorophyll
+Tackle:Growl:Leech Seed:Vine Whip:Poison Powder:Sleep Powder:Take Down:Razor Leaf:Sweet Scent:Growth:Double-Edge:Petal Dance:WorrySeed:Synthesis:Petal Blizzard:Solar Beam
+By spreading the broad petals of its flower and catching the sun's rays, it fills its body with power.

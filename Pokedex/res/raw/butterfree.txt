@@ -1,0 +1,8 @@
+012
+Butterfree
+BUG:FLYING
+60:45:50:90:80:70
+010 Caterpie: 011 Metapod: 012 Butterfree
+Compoundeyes:Tinted Lens
+Confusion:Poison Powder:Stun Spore:Sleep Powder:Gust:Supersonic:Whrilwind:Psybeam:Silver Wind:Tailwind:Rage Powder:Safeguard:Captivate:Bug Buzz:Quiver Dance
+It loves the honey of flowers and can locate flower patches that have even tiny amounts of pollen.

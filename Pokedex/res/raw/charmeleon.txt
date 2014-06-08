@@ -1,0 +1,8 @@
+005
+Charmeleon
+FIRE
+58:64:58:80:65:80
+004 Charmander:005 Charmeleon:006 Charizard
+Blaze:Solar Power
+Scratch:Growl:Ember:Smokescreen:Dragon Rage:Scary Face:Fire Fang:Flame Burst:Slash:Flamethrower:Fire Spin:Inferno
+It lashes about with its tail to knock down its foe. It then tears up the fallen opponent with sharp claws.

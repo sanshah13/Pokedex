@@ -1,0 +1,8 @@
+022
+Fearow
+NORMAL:FLYING
+65:90:65:61:61:100
+021 Spearow:022 Fearow
+Keen Eye:Sniper
+Drill Run:Pluck:Peck:Growl:Leer:Fury Attack:Pursuit:Aerial Ace:Mirror Move:Agility:Assurance:Roost:Drill Peck
+With its huge and magnificent wings, it can keep aloft without ever having to land for rest.

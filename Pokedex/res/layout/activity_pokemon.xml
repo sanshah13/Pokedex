@@ -1,0 +1,330 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+<ScrollView
+   android:id="@+id/scroll_id"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:scrollbars="vertical"
+   android:layout_alignParentTop="true"
+   android:layout_above="@+id/viewMovesButton">
+   
+<GridLayout 
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="2"
+    android:rowCount="7" >
+
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="21dp"
+        android:layout_column="0"
+        android:layout_row="0" />
+
+    <ImageView
+        android:id="@+id/pokemonPhoto"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_column="0"
+        android:layout_columnSpan="1"
+        android:layout_gravity="left|top"
+        android:layout_row="1"
+        android:layout_rowSpan="3"
+        android:paddingLeft="5dp"
+        android:paddingTop="10dp" />
+
+    <TextView
+        android:id="@+id/generalTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_gravity="fill_horizontal|top"
+        android:layout_row="1"
+        android:paddingLeft="5dp"
+        android:paddingTop="28dp"
+        android:text="General:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/general"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_column="1"
+        android:layout_gravity="fill_horizontal|bottom"
+        android:layout_row="1"
+        android:paddingLeft="5dp"
+        android:paddingRight="2dp"
+        android:paddingTop="48dp"
+        android:text="General Info"
+        android:width="0dip" />
+
+    <TextView
+        android:id="@+id/typeTitle"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_gravity="left|top"
+        android:layout_row="3"
+        android:paddingLeft="5dp"
+        android:paddingTop="12dp"
+        android:text="Type(s):"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_gravity="left|top"
+        android:layout_row="3"
+        android:paddingLeft="6dp"
+        android:paddingTop="40dp"
+        android:text="Types" />
+
+    <TextView
+        android:id="@+id/evolutionTitle"
+        android:layout_width="156dp"
+        android:layout_height="wrap_content"
+        android:layout_column="0"
+        android:layout_gravity="left|top"
+        android:layout_row="4"
+        android:text="Evolution Chain:"
+        android:paddingLeft="5dp"
+        android:paddingTop="10dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    
+    <TextView
+        android:id="@+id/evolution"
+        android:layout_width="143dp"
+        android:layout_height="106dp"
+        android:layout_column="0"
+        android:layout_columnSpan="2"
+        android:layout_gravity="left|top"
+        android:layout_row="4"
+        android:paddingLeft="6dp"
+        android:paddingTop="33dp"
+        android:text="Evolution Chain"
+        android:width="0dip" />
+    
+    <TextView
+        android:id="@+id/statsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="148dp"
+        android:layout_column="1"
+        android:layout_gravity="fill_horizontal|top"
+        android:layout_row="3"
+        android:layout_rowSpan="2"
+        android:paddingLeft="2dp"
+        android:paddingTop="12dp"
+        android:text="Stats:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    
+    <TextView
+        android:id="@+id/hpTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_gravity="left|top"
+        android:layout_row="3"
+        android:layout_rowSpan="2"
+        android:paddingLeft="73dp"
+        android:paddingTop="35dp"
+        android:text="HP:"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/atkTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_gravity="left|top"
+        android:layout_row="3"
+        android:layout_rowSpan="2"
+        android:paddingLeft="65dp"
+        android:paddingTop="53dp"
+        android:text="ATK:"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/defTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_gravity="left|top"
+        android:layout_row="3"
+        android:layout_rowSpan="2"
+        android:paddingLeft="67dp"
+        android:paddingTop="71dp"
+        android:text="DEF:"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/spatkTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_gravity="left|top"
+        android:layout_row="3"
+        android:layout_rowSpan="2"
+        android:paddingLeft="44dp"
+        android:paddingTop="90dp"
+        android:text="SP.ATK:"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/spdefTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_gravity="left|top"
+        android:layout_row="3"
+        android:layout_rowSpan="2"
+        android:paddingLeft="46dp"
+        android:paddingTop="109dp"
+        android:text="SP.DEF:"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/spdTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_column="1"
+        android:layout_gravity="left|top"
+        android:layout_row="3"
+        android:layout_rowSpan="2"
+        android:paddingLeft="66dp"
+        android:paddingTop="125dp"
+        android:text="SPD:"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    
+    <TextView
+        android:id="@+id/hp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_gravity="left|top"
+        android:layout_row="3"
+        android:layout_rowSpan="2"
+        android:paddingLeft="102dp"
+        android:paddingTop="35dp"
+        android:text="HP"
+        android:textSize="14sp" />
+    
+    <TextView
+        android:id="@+id/atk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_gravity="left|top"
+        android:layout_row="3"
+        android:layout_rowSpan="2"
+        android:paddingLeft="102dp"
+        android:paddingTop="53dp"
+        android:text="ATK"
+        android:textSize="14sp"/>
+    
+    <TextView
+        android:id="@+id/def"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_gravity="left|top"
+        android:layout_row="3"
+        android:layout_rowSpan="2"
+        android:paddingLeft="102dp"
+        android:paddingTop="71dp"
+        android:text="DEF"
+        android:textSize="14sp" />
+    
+    <TextView
+        android:id="@+id/spatk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_gravity="left|top"
+        android:layout_row="3"
+        android:layout_rowSpan="2"
+        android:paddingLeft="102dp"
+        android:paddingTop="90dp"
+        android:text="SP.ATK"
+        android:textSize="14sp"/>
+    
+     <TextView
+         android:id="@+id/spdef"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_column="1"
+         android:layout_gravity="left|top"
+         android:layout_row="3"
+         android:layout_rowSpan="2"
+         android:paddingLeft="102dp"
+         android:paddingTop="109dp"
+         android:text="SP.DEF"
+         android:textSize="14sp" />
+     
+     <TextView
+         android:id="@+id/spd"
+         android:layout_width="wrap_content"
+         android:layout_height="162dp"
+         android:layout_column="1"
+         android:layout_gravity="left|top"
+         android:layout_row="3"
+         android:layout_rowSpan="2"
+         android:paddingLeft="102dp"
+         android:paddingTop="125dp"
+         android:text="SPD"
+         android:textSize="14sp" />
+	
+     <TextView
+         android:id="@+id/header"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_column="0"
+         android:layout_columnSpan="2"
+         android:layout_gravity="left|top"
+         android:layout_row="0"
+         android:text="Name #"
+         android:gravity="center"
+         android:textAppearance="?android:attr/textAppearanceLarge"
+         android:textStyle="bold"
+         android:textSize="25sp"
+         android:paddingTop="5dp" />
+</GridLayout>
+</ScrollView>
+
+	<Button
+        android:id="@+id/viewMovesButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_above="@+id/back"
+        android:onClick="openMovesView"
+        android:text="View All Moves"
+        android:textSize="15sp" />
+
+     <Button
+         android:id="@+id/back"
+         android:layout_width="match_parent"
+         android:layout_height="50dp"
+         android:layout_gravity="left|top"
+         android:gravity="center"
+         android:onClick="openPokedexView"
+         android:text="Back to Pokedex"
+         android:textSize="15sp"
+         android:layout_alignParentBottom="true" />
+     
+</RelativeLayout>

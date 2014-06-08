@@ -1,0 +1,8 @@
+009
+Blastoise
+WATER
+79:83:100:85:105:78
+007 Squritle:008 Wartortle:009 Blastoise
+Torrent:Rain Dish
+Flash Cannon:Tackle:Tail Whip:Water Gun:Withdraw:Bubble:Bite:Rapid Spin:Protect:Water Pulse:Aqua Tail:Skull Bash:Iron Defense:Rain Dance:Hydro Pump
+It Crushes its foe under its heavy body to cause fainting. In a pinch, it will withdraw inside its shell.

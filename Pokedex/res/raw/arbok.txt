@@ -1,0 +1,8 @@
+024
+Arbok
+POISON
+60:85:69:65:79:80
+023 Ekans:024 Arbok
+Intimidate:Shed Skin:Unnerve
+Ice Fang:Thunder Fang:Fire Fang:Wrap:Leer:Poison Sting:Bite:Glare:Screech:Acid:Crunch:Stockpile:Swallow:Spit Up:Acid Spray:Mud Bomb:Gastro Acid:Belch:Haze:Coil:Gunk Shot
+The pattern on its belly appears to be a frightening face. Weak foes will flee just at the sight of the pattern.

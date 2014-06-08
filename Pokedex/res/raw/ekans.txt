@@ -1,0 +1,8 @@
+023
+Ekans
+POISON
+35:60:44:40:54:55
+023 Ekans:024 Arbok
+Intimidate:Shed Skin:Unnerve
+Wrap:Leer:Poison Sting:Bite:Glare:Screech:Acid:Stockpile:Swallow:Spit Up:Acid Spray:Mud Bomb:Gastro Acid:Belch:Haze:Coil:Gunk Shot
+The older it gets, the longer it grows. At night, it wraps its long body around branches to rest.

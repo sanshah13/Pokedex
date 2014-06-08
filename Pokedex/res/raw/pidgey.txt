@@ -1,0 +1,8 @@
+016
+Pidgey
+NORMAL:FLYING
+40:45:40:35:35:56
+016 Pidgey:017 Pidgeotto:018 Pidgeot
+Keen Eye:Tangled Feet:Big Pecks
+Tackle:Sand Attack:Gust:Quick Attack:Whrilwind:Twister:Feather Dance:Agility:Wing Attack:Roost:Tailwind:Mirror Move:Air Slash:Hurricane
+A common sight in forest and woods. It flaps its wings at ground level to kick up blinding sand.

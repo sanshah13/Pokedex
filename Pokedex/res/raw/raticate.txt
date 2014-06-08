@@ -1,0 +1,8 @@
+020
+Raticate
+NORMAL
+55:81:60:50:70:97
+019 Rattata:020 Raticate
+Run Away:Guts:Hustle
+Swords Dance:Tackle:Tail Whip:Quick Attack:Focus Energy:Bite:Pursuit:Hyper Fang:Sucker Punch:Scary Face:Crunch:Assurance:Super Fang:Double-Edge:Endeavor
+It whittles its constantly growing fangs by gnawing on hard things. It can chew apart cinder walls.

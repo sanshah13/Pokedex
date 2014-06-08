@@ -1,0 +1,8 @@
+018
+Pidgeot
+NORMAL:FLYING
+83:80:75:70:70:101
+016 Pidgey:017 Pidgeotto:018 Pidgeot
+Keen Eye:Tangled Feet:Big Pecks
+Tackle:Sand Attack:Gust:Quick Attack:Whrilwind:Twister:Feather Dance:Agility:Wing Attack:Roost:Tailwind:Mirror Move:Air Slash:Hurricane
+When hunting, it skims the surface of water at high speed to pick off unwary prey such as Magikarp.

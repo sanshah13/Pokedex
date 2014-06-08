@@ -1,0 +1,8 @@
+025
+Pikachu
+ELECTRIC
+35:55:40:50:50:90
+172 Pichu:026 Raichu
+Static:Lightningrod
+Tail Whip:Thundershock:Growl:Play Nice:Quick Attack:Thunder Wave:Electro Ball:Double Team:Nuzzle:Slam:Thunderbolt:Feint:Agility:Discharge:Light Screen:Thunder
+It raises its tail to check its surroundings. The tail is sometimes struck by lightning in this pose.

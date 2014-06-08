@@ -1,0 +1,8 @@
+017
+Pidgeotto
+NORMAL:FLYING
+63:60:55:50:50:71
+016 Pidgey:017 Pidgeotto:018 Pidgeot
+Keen Eye:Tangled Feet:Big Pecks
+Tackle:Sand Attack:Gust:Quick Attack:Whrilwind:Twister:Feather Dance:Agility:Wing Attack:Roost:Tailwind:Mirror Move:Air Slash:Hurricane
+The claws on its feet are well developed. It can cary prey such as an Exeggcute to its nest over 60 miles away.

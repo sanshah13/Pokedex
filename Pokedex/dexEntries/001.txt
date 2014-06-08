@@ -1,0 +1,8 @@
+001
+Bulbasuar
+GRASS:POISON
+45:49:49:65:65:45
+002 Ivysuar:003 Venusaur
+Overgrow:Chlorophyll
+Tackle:Growl:Leech Seed:Vine Whip:Poison Powder:Sleep Powder:Take Down:Razor Leaf:Sweet Scent:Growth:Double-Edge:WorrySeed:Synthesis:Seed Bomb
+A strange seed was planted on its back at birth. The plant sprouts and grows with this Pokemon.

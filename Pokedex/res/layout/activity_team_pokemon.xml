@@ -1,0 +1,282 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pokedex.TeamPokemonActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <TextView
+        android:id="@+id/nicknameHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:paddingTop="5dp"
+        android:gravity="center"
+        android:text="Nickname"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/nameHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/nicknameHeader"
+        android:paddingTop="2dp"
+        android:text="Name and Number"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:gravity="center" />
+    
+    <Button
+        android:id="@+id/editNickname"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true" 
+        android:layout_alignParentRight="true" 
+        android:layout_below="@+id/nameHeader"
+        android:text="Change Nickname"
+        android:textSize="12sp"
+        android:onClick="changeNickname" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editNickname" />
+
+    <TextView
+        android:id="@+id/statsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/imageView1"
+        android:layout_toRightOf="@+id/imageView1"
+        android:paddingTop="10dp"
+        android:text="Stats:"
+        android:textStyle="bold"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/hpTitle"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/statsTitle"
+        android:layout_toRightOf="@+id/imageView1"
+        android:gravity="right"
+        android:paddingTop="2dp"
+        android:text="HP:"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+    
+     <TextView
+        android:id="@+id/atkTitle"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hpTitle"
+        android:layout_toRightOf="@+id/imageView1"
+        android:gravity="right"
+        android:paddingTop="1dp"
+        android:text="ATK:"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+     
+      <TextView
+        android:id="@+id/defTitle"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/atkTitle"
+        android:layout_toRightOf="@+id/imageView1"
+        android:gravity="right"
+        android:paddingTop="1dp"
+        android:text="DEF:"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+      
+      <TextView
+        android:id="@+id/spatkTitle"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/defTitle"
+        android:layout_toRightOf="@+id/imageView1"
+        android:gravity="right"
+        android:paddingTop="1dp"
+        android:text="SP.ATK:"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/spdefTitle"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spatkTitle"
+        android:layout_toRightOf="@+id/imageView1"
+        android:gravity="right"
+        android:paddingTop="1dp"
+        android:text="SP.DEF:"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+      
+      <TextView
+        android:id="@+id/spdTitle"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spdefTitle"
+        android:layout_toRightOf="@+id/imageView1"
+        android:gravity="right"
+        android:paddingTop="1dp"
+        android:text="SPD:"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+      <TextView
+          android:id="@+id/hpInfo"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/hpTitle"
+          android:layout_alignBottom="@+id/hpTitle"
+          android:layout_alignParentRight="true"
+          android:layout_toRightOf="@+id/hpTitle"
+          android:paddingLeft="2dp"
+          android:text="HP"
+          android:textSize="14sp" />
+      
+       <TextView
+          android:id="@+id/atkInfo"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/atkTitle"
+          android:layout_alignBottom="@+id/atkTitle"
+          android:layout_alignParentRight="true"
+          android:layout_toRightOf="@+id/atkTitle"
+          android:paddingLeft="2dp"
+          android:text="ATK"
+          android:textSize="14sp" />
+       
+        <TextView
+          android:id="@+id/defInfo"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/defTitle"
+          android:layout_alignBottom="@+id/defTitle"
+          android:layout_alignParentRight="true"
+          android:layout_toRightOf="@+id/defTitle"
+          android:paddingLeft="2dp"
+          android:text="DEF"
+          android:textSize="14sp" />
+        
+        <TextView
+          android:id="@+id/spatkInfo"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/spatkTitle"
+          android:layout_alignBottom="@+id/spatkTitle"
+          android:layout_alignParentRight="true"
+          android:layout_toRightOf="@+id/spatkTitle"
+          android:paddingLeft="2dp"
+          android:text="SP.ATK"
+          android:textSize="14sp" />
+        
+        <TextView
+          android:id="@+id/spdefInfo"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/spdefTitle"
+          android:layout_alignBottom="@+id/spdefTitle"
+          android:layout_alignParentRight="true"
+          android:layout_toRightOf="@+id/spdefTitle"
+          android:paddingLeft="2dp"
+          android:text="SP.DEF"
+          android:textSize="14sp" />
+
+        <TextView
+          android:id="@+id/spdInfo"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignBaseline="@+id/spdTitle"
+          android:layout_alignBottom="@+id/spdTitle"
+          android:layout_alignParentRight="true"
+          android:layout_toRightOf="@+id/spdTitle"
+          android:paddingLeft="2dp"
+          android:text="SPD"
+          android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/abilityTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/spdTitle"
+            android:layout_below="@+id/spdTitle"
+            android:paddingLeft="5dp"
+            android:paddingTop="3dp"
+            android:text="Ability:"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/abilityInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/abilityTitle"
+            android:layout_alignBottom="@+id/abilityTitle"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/abilityTitle"
+            android:paddingLeft="2dp"
+            android:paddingTop="5dp"
+            android:text="Ability"
+            android:textSize="14dp"
+            android:width="0dip" />
+
+        <TextView
+            android:id="@+id/movesTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/imageView1"
+            android:paddingTop="10dp"
+            android:paddingLeft="5dp"
+            android:text="Moves:"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_above="@+id/deletePkm"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/movesTitle"
+            android:paddingLeft="5dp" >
+
+        </ListView>
+
+        <Button
+            android:id="@+id/backToTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:text="Back to Team"
+            android:textSize="12sp"
+            android:onClick="openTeamView" />
+
+        <Button
+            android:id="@+id/deletePkm"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_above="@+id/backToTeam"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:text="Delete Pokemon from Team"
+            android:textSize="12sp"
+            android:onClick="deletePokemon" />
+
+</RelativeLayout>
+

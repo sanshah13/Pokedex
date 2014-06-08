@@ -1,0 +1,8 @@
+010
+Caterpie
+BUG
+45:30:35:20:20:45
+010 Caterpie: 011 Metapod: 012 Butterfree
+Shield Dust:Run Away
+Tackle:String Shot:Bug Bite
+For protection, it releases a horrible stench from the antennae on its head to drive away enemies.

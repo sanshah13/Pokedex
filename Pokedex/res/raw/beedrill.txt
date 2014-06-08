@@ -1,0 +1,8 @@
+015
+Beedrill
+BUG:POISON
+65:90:40:45:80:75
+013 Weedle:014 Kakuna:015 Beedrill
+Swarm:Sniper
+Fury Attack:Focus Energy:Twineedle:Rage:Pursuit:Toxic Spikes:Pin Missile:Agility:Assurance:Poison Jab:Endeavor:Fell Stinger
+It has three poisonous stingers on its forelegs and its tail. They are used to jab its enemy repeatedly.

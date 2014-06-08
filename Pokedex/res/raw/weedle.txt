@@ -1,0 +1,8 @@
+013
+Weedle
+BUG:POISON
+40:35:30:20:20:50
+014 Kakuna:015 Beedrill
+Shield Dust:Run Away
+Poison Sting:String Shot:Bug Bite
+Often found in forest and grasslands. It has a sharp, toxic barb of around two inches on top of its head.

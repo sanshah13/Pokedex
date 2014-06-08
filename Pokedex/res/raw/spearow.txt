@@ -1,0 +1,8 @@
+021
+Spearow
+NORMAL:FLYING
+40:60:30:31:31:70
+021 Spearow:022 Fearow
+Keen Eye:Sniper
+Peck:Growl:Leer:Fury Attack:Pursuit:Aerial Ace:Mirror Move:Agility:Assurance:Roost:Drill Peck
+Very protective of its territory, it flaps its short wings busily to dart around at high speeds.

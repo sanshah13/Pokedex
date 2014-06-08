@@ -1,0 +1,8 @@
+006
+Charizard
+FIRE
+78:84:78:109:85:100
+004 Charmander:005 Charmeleon
+Blaze:Solar Power
+Scratch:Growl:Ember:Smokescreen:Dragon Rage:Scary Face:Fire Fang:Flame Burst:Wing Attack:Slash:Flamethrower:Fire Spin:Inferno:Heat Wave:Flare Blitz
+When expelling a blast of superhot fire, the red flame at the tip of its tail burns more intensely.

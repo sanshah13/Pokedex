@@ -1,0 +1,8 @@
+019
+Rattata
+NORMAL
+30:56:35:25:35:72
+019 Rattata:020 Raticate
+Run Away:Guts:Hustle
+Tackle:Tail Whip:Quick Attack:Focus Energy:Bite:Pursuit:Hyper Fang:Sucker Punch:Crunch:Assurance:Super Fang:Double-Edge:Endeavor
+Living wherever there is food available, it ceaselessly scavengers for edibles the entire day.

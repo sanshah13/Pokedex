@@ -1,0 +1,8 @@
+014
+Kakuna
+BUG:POISON
+45:25:50:25:25:35
+013 Weedle:014 Kakuna:015 Beedrill
+Shed Skin
+Harden
+Almost incapible of moving, this Pokemon can only harden its shell to protect itself when it is in danger.

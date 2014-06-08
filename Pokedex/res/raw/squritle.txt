@@ -1,0 +1,8 @@
+007
+Squritle
+WATER
+44:48:65:50:64:43
+007 Squritle:008 Wartortle:009 Blastoise
+Torrent:Rain Dish
+Tackle:Tail Whip:Water Gun:Withdraw:Bubble:Bite:Rapid Spin:Protect:Water Pulse:Aqua Tail:Skull Bash:Iron Defense:Rain Dance:Hydro Pump
+It shelters itself in its shell, then strikes back with spouts of water at every opportunity.

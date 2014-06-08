@@ -1,0 +1,8 @@
+002
+Ivysaur
+GRASS:POISON
+60:62:63:80:80:60
+001 Bulbasaur:003 Venusaur
+Overgrow:Chlorophyll
+Tackle:Growl:Leech Seed:Vine Whip:Poison Powder:Sleep Powder:Take Down:Razor Leaf:Sweet Scent:Growth:Double-Edge:WorrySeed:Synthesis:Solar Beam
+There is a plant bulb on its back. When it absorbs nutrients, the bulb is said to blossom into a large flower.

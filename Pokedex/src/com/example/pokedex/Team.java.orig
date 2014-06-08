@@ -1,0 +1,263 @@
+package com.example.pokedex;
+/**
+ * @author Robert Williams
+ * 
+ * This is a Pokemon Team
+ * A team consist of:
+ * 	name
+ * 	description
+ *  Pokemon -> 6 or less
+ *  typeAD -> 18 types initialized to 1, for resistance (Advantage) it decreases approaching 0 (MIN)
+ *  		or Super Effective (Disadvantage) it increases approaching 24 (MAX)
+ *  
+ * Actions:
+ * 	Add Pokemon
+ * 	Edit Pokemon -> replace current Pokemon
+ * 	Remove Pokemon
+ * 	Rename Team 
+ * 	Rearrange Pokemon (ordering) ->Maybe
+ * */
+
+public class Team {
+	
+	/*Member Fields*/
+	public String name;
+	public String description;
+	Pokemon[] pokemon;
+	int[] typeAD; //advantages&disadvantages
+	
+	public Team(String name, String description){
+		this.name = name;
+		this.description = description;
+		
+		pokemon = new Pokemon[6];
+		
+	}
+	
+	/**Calculate the type advantages and disadvantages for the team
+	 * RESULT: a new typeAD array, with values reflecting the team build*/
+	public void typeCalculation(){
+		typeAD  = new int[18];
+		int i=0; do{typeAD[i] = 1;i++;}while(i<18);
+		
+		//TO-DO
+			//Need to build more logic for this
+			//typeChart returns a value, now, how to get it into the data structure
+			//typeChart(pokemon[i].type, pokemon[j].type);
+	}
+	
+	/**Add a Pokemon to the team
+	 * RESULT: Place a Pokemon in the first available position of the team*/
+	public void addPokemon(Pokemon pkmn){
+		int position = teamSpot();
+		
+		if( position < 0)//No Open spot
+			return;
+		pokemon[position] = pkmn;
+		
+	}
+	
+	/*Find an open position in the team, -1 if no position is available*/
+	private int teamSpot(){
+		for(int i = 0; i<6;i++)
+			{if(pokemon[i]==null)return i;}
+		return -1;
+	}
+	
+	/**Remove the pokemon from the selected position
+	 * Result: Team of Pokemon shifted so that the new empty position is at the end*/
+	public void removePokemon(int position){
+		pokemon[position] = null; //Remove the pokemon
+		while(position < 6 && pokemon[position+1] != null)
+			pokemon[position] = pokemon[position++]; //Shift remaining pokemon left && increment position
+	}
+	
+	/**Rename the team, noting that this doesn't check aginst other team names
+	 * Result: The team with a different name*/
+	public void renameTeam(String name){
+		this.name = name;
+	}
+	
+	/**Change the team's description
+	 * Result: Adding a description to the team
+	 * */
+	public void redescribeTeam(String description){
+		this.description = description; 
+	}
+	
+	/*Find the effectiveness of a Pokemon Type, searches a look up table
+	 * Input is the defensive type first, then the attacking type
+	 * Result: a double, based on the value of damage dealt to the defensive pokemon*/
+	private double typeChart(String defType, String atkType){
+		
+		switch(defType){
+		case "NORMAL":
+			switch(atkType){
+			case "NORMAL":	return 1;case"FIRE":	return 1;case"WATER":	return 1;
+			case "ELECTRIC":return 1;case "GRASS":	return 1;case "ICE":	return 1;
+			case "FIGHTING":return 2;case "POISON":	return 1;case "GROUND":	return 1;
+			case "FLYING":	return 1;case "PSYCHIC":return 1;case "BUG":	return 1;
+			case "ROCK":	return 1;case "GHOST":	return 0;case "DRAGON":	return 1;
+			case "DARK":	return 1;case "STEEL":	return 1;case "FAIRY":	return 1;
+			}
+		case "FIRE":
+			switch(atkType){
+			case "NORMAL":	return 1;case"FIRE":	return .5;case"WATER":	return 2;
+			case "ELECTRIC":return 1;case "GRASS":	return .5;case "ICE":	return .5;
+			case "FIGHTING":return 1;case "POISON":	return 1;case "GROUND":	return 2;
+			case "FLYING":	return 1;case "PSYCHIC":return 1;case "BUG":	return .5;
+			case "ROCK":	return 2;case "GHOST":	return 1;case "DRAGON":	return 1;
+			case "DARK":	return 1;case "STEEL":	return .5;case "FAIRY":	return .5;
+			}
+		case "WATER":
+			switch(atkType){
+			case "NORMAL":	return 1;case"FIRE":	return .5;case"WATER":	return .5;
+			case "ELECTRIC":return 2;case "GRASS":	return 2;case "ICE":	return .5;
+			case "FIGHTING":return 1;case "POISON":	return 1;case "GROUND":	return 1;
+			case "FLYING":	return 1;case "PSYCHIC":return 1;case "BUG":	return 1;
+			case "ROCK":	return 1;case "GHOST":	return 1;case "DRAGON":	return 1;
+			case "DARK":	return 1;case "STEEL":	return .5;case "FAIRY":	return 1;
+			}
+		case "ELECTRIC":
+			switch(atkType){
+			case "NORMAL":	return 1;case"FIRE":	return 1;case"WATER":	return 1;
+			case "ELECTRIC":return .5;case "GRASS":	return 1;case "ICE":	return 1;
+			case "FIGHTING":return 1;case "POISON":	return 1;case "GROUND":	return 2;
+			case "FLYING":	return .5;case "PSYCHIC":return 1;case "BUG":	return 1;
+			case "ROCK":	return 1;case "GHOST":	return 1;case "DRAGON":	return 1;
+			case "DARK":	return 1;case "STEEL":	return .5;case "FAIRY":	return 1;
+			}
+		case "GRASS":
+			switch(atkType){
+			case "NORMAL":	return 1;case"FIRE":	return 2;case"WATER":	return .5;
+			case "ELECTRIC":return .5;case "GRASS":	return .5;case "ICE":	return 2;
+			case "FIGHTING":return 1;case "POISON":	return 2;case "GROUND":	return .5;
+			case "FLYING":	return 2;case "PSYCHIC":return 1;case "BUG":	return 2;
+			case "ROCK":	return 1;case "GHOST":	return 1;case "DRAGON":	return 1;
+			case "DARK":	return 1;case "STEEL":	return 1;case "FAIRY":	return 1;
+			}
+		case "ICE":
+			switch(atkType){
+			case "NORMAL":	return 1;case"FIRE":	return 2;case"WATER":	return 1;
+			case "ELECTRIC":return 1;case "GRASS":	return 1;case "ICE":	return .5;
+			case "FIGHTING":return 2;case "POISON":	return 1;case "GROUND":	return 1;
+			case "FLYING":	return 1;case "PSYCHIC":return 1;case "BUG":	return 1;
+			case "ROCK":	return 2;case "GHOST":	return 1;case "DRAGON":	return 1;
+			case "DARK":	return 1;case "STEEL":	return 2;case "FAIRY":	return 1;
+			}
+		case "FIGHTING":
+			switch(atkType){
+			case "NORMAL":	return 1;case"FIRE":	return 1;case"WATER":	return 1;
+			case "ELECTRIC":return 1;case "GRASS":	return 1;case "ICE":	return 1;
+			case "FIGHTING":return 1;case "POISON":	return 1;case "GROUND":	return 1;
+			case "FLYING":	return 2;case "PSYCHIC":return 2;case "BUG":	return .5;
+			case "ROCK":	return .5;case "GHOST":	return 1;case "DRAGON":	return 1;
+			case "DARK":	return .5;case "STEEL":	return 1;case "FAIRY":	return 2;
+			}
+		case "POISON":
+			switch(atkType){
+			case "NORMAL":	return 1;case"FIRE":	return 1;case"WATER":	return 1;
+			case "ELECTRIC":return 1;case "GRASS":	return .5;case "ICE":	return 1;
+			case "FIGHTING":return .5;case "POISON":return .5;case "GROUND":return 2;
+			case "FLYING":	return 1;case "PSYCHIC":return 2;case "BUG":	return .5;
+			case "ROCK":	return 1;case "GHOST":	return 1;case "DRAGON":	return 1;
+			case "DARK":	return 1;case "STEEL":	return 1;case "FAIRY":	return .5;
+			}
+		case "GROUND":
+			switch(atkType){
+			case "NORMAL":	return 1;case"FIRE":	return 1;case"WATER":	return 2;
+			case "ELECTRIC":return 0;case "GRASS":	return 2;case "ICE":	return 2;
+			case "FIGHTING":return 1;case "POISON":	return .5;case "GROUND":return 1;
+			case "FLYING":	return 1;case "PSYCHIC":return 1;case "BUG":	return 1;
+			case "ROCK":	return .5;case "GHOST":	return 1;case "DRAGON":	return 1;
+			case "DARK":	return 1;case "STEEL":	return 1;case "FAIRY":	return 1;
+			}
+		case "FLYING":
+			switch(atkType){
+			case "NORMAL":	return 1;case"FIRE":	return 1;case"WATER":	return 1;
+			case "ELECTRIC":return 2;case "GRASS":	return .5;case "ICE":	return 2;
+			case "FIGHTING":return .5;case "POISON":return 1;case "GROUND":	return 0;
+			case "FLYING":	return 1;case "PSYCHIC":return 1;case "BUG":	return .5;
+			case "ROCK":	return 2;case "GHOST":	return 1;case "DRAGON":	return 1;
+			case "DARK":	return 1;case "STEEL":	return 1;case "FAIRY":	return 1;
+			}
+		case "PSYCHIC":
+			switch(atkType){
+			case "NORMAL":	return 1;case"FIRE":	return 1;case"WATER":	return 1;
+			case "ELECTRIC":return 1;case "GRASS":	return 1;case "ICE":	return 1;
+			case "FIGHTING":return .5;case "POISON":return 1;case "GROUND":	return 1;
+			case "FLYING":	return 1;case "PSYCHIC":return .5;case "BUG":	return 2;
+			case "ROCK":	return 1;case "GHOST":	return 2;case "DRAGON":	return 1;
+			case "DARK":	return 2;case "STEEL":	return 1;case "FAIRY":	return 1;
+			}
+		case "BUG":
+			switch(atkType){
+			case "NORMAL":	return 1;case"FIRE":	return 2;case"WATER":	return 1;
+			case "ELECTRIC":return 1;case "GRASS":	return .5;case "ICE":	return 1;
+			case "FIGHTING":return .5;case "POISON":return 1;case "GROUND":	return .5;
+			case "FLYING":	return 2;case "PSYCHIC":return 1;case "BUG":	return 1;
+			case "ROCK":	return 2;case "GHOST":	return 1;case "DRAGON":	return 1;
+			case "DARK":	return 1;case "STEEL":	return 1;case "FAIRY":	return 1;
+			}
+		case "ROCK":
+			switch(atkType){
+			case "NORMAL":	return .5;case"FIRE":	return .5;case"WATER":	return 2;
+			case "ELECTRIC":return 1;case "GRASS":	return 2;case "ICE":	return 1;
+			case "FIGHTING":return 2;case "POISON":	return .5;case "GROUND":return 2;
+			case "FLYING":	return .5;case "PSYCHIC":return 1;case "BUG":	return 1;
+			case "ROCK":	return 1;case "GHOST":	return 1;case "DRAGON":	return 1;
+			case "DARK":	return 1;case "STEEL":	return 2;case "FAIRY":	return 1;
+			}
+		case "GHOST":
+			switch(atkType){
+			case "NORMAL":	return 0;case"FIRE":	return 1;case"WATER":	return 1;
+			case "ELECTRIC":return 1;case "GRASS":	return 1;case "ICE":	return 1;
+			case "FIGHTING":return 0;case "POISON":	return .5;case "GROUND":return 1;
+			case "FLYING":	return 1;case "PSYCHIC":return 1;case "BUG":	return .5;
+			case "ROCK":	return 1;case "GHOST":	return 2;case "DRAGON":	return 1;
+			case "DARK":	return 2;case "STEEL":	return 1;case "FAIRY":	return 1;
+			}
+		case "DRAGON":
+			switch(atkType){
+			case "NORMAL":	return 1;case"FIRE":	return .5;case"WATER":	return .5;
+			case "ELECTRIC":return .5;case "GRASS":	return .5;case "ICE":	return 2;
+			case "FIGHTING":return 1;case "POISON":	return 1;case "GROUND":	return 1;
+			case "FLYING":	return 1;case "PSYCHIC":return 1;case "BUG":	return 1;
+			case "ROCK":	return 1;case "GHOST":	return 1;case "DRAGON":	return 2;
+			case "DARK":	return 1;case "STEEL":	return 1;case "FAIRY":	return 2;
+			}
+		case "DARK":
+			switch(atkType){
+			case "NORMAL":	return 1;case"FIRE":	return 1;case"WATER":	return 1;
+			case "ELECTRIC":return 1;case "GRASS":	return 1;case "ICE":	return 1;
+			case "FIGHTING":return 2;case "POISON":	return 1;case "GROUND":	return 1;
+			case "FLYING":	return 1;case "PSYCHIC":return 0;case "BUG":	return 2;
+			case "ROCK":	return 1;case "GHOST":	return .5;case "DRAGON":return 1;
+			case "DARK":	return .5;case "STEEL":	return 1;case "FAIRY":	return 2;
+			}
+		case "STEEL":
+			switch(atkType){
+			case "NORMAL":	return .5;case"FIRE":	return 2;case"WATER":	return 1;
+			case "ELECTRIC":return 1;case "GRASS":	return .5;case "ICE":	return .5;
+			case "FIGHTING":return 2;case "POISON":	return 0;case "GROUND":	return 2;
+			case "FLYING":	return .5;case "PSYCHIC":return .5;case "BUG":	return .5;
+			case "ROCK":	return .5;case "GHOST":	return 1;case "DRAGON":	return .5;
+			case "DARK":	return 1;case "STEEL":	return .5;case "FAIRY":	return .5;
+			}
+		case "FAIRY":
+			switch(atkType){
+			case "NORMAL":	return 1;case"FIRE":	return 1;case"WATER":	return 1;
+			case "ELECTRIC":return 1;case "GRASS":	return 1;case "ICE":	return 1;
+			case "FIGHTING":return .5;case "POISON":return 2;case "GROUND":	return 1;
+			case "FLYING":	return 1;case "PSYCHIC":return 1;case "BUG":	return .5;
+			case "ROCK":	return 1;case "GHOST":	return 1;case "DRAGON":	return 1;
+			case "DARK":	return 1;case "STEEL":	return 2;case "FAIRY":	return 1;
+			}
+		default: //Oh my God Jim, this is bad! This is wrong!
+			//This is Badong!
+			return -42;
+		}
+		
+	}
+	
+}

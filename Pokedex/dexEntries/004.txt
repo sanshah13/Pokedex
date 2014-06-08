@@ -1,0 +1,8 @@
+004
+Charmander
+FIRE
+39:52:43:60:50:65
+005 Charmeleon:006 Charizard
+Blaze:Solar Power
+Scratch:Growl:Ember:Smokescreen:Dragon Rage:Scary Face:Fire Fang:Flame Burst:Slash:Flamethrower:Fire Spin:Inferno
+The flame on its tail indicates Charmander's life force. If it is healthy, the flame burns brightly.

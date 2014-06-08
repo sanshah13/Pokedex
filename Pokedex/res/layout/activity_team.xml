@@ -1,0 +1,152 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp" >
+
+    <TextView
+        android:id="@+id/teamHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="Team Name"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+	
+    <TextView
+        android:id="@+id/teamDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/teamHeader"
+        android:gravity="center"
+        android:text="Team Description"
+        android:textSize="13sp"
+        android:textStyle="italic" />
+    
+     <Button
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/teamDescription"
+        android:text="Edit Name/Description"
+        android:textSize="12sp" 
+        android:onClick="editText"/>
+   
+	 <TextView
+	    android:id="@+id/pkmTitle"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_below="@+id/editText"
+	    android:paddingTop="5dp"
+	    android:text="Pokemon:"
+	    android:textSize="14sp"
+	    android:textStyle="bold" />
+	    
+	  <ListView
+	        android:id="@+id/pkmList"
+	        android:layout_width="match_parent"
+	        android:layout_height="120dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/pkmTitle" >
+	    </ListView>
+	
+	    <Button
+	        android:id="@+id/addPokemon"
+	        android:layout_width="match_parent"
+	        android:layout_height="30dp"
+	        android:layout_below="@+id/pkmList"
+	        android:text="Add Pokemon"
+	        android:textSize="12sp" 
+	        android:onClick="addPokemon"/>
+	
+	    <ScrollView
+  			android:id="@+id/scroll_id"
+    		android:layout_width="fill_parent"
+   			android:layout_height="wrap_content"
+   			android:scrollbars="vertical"
+			android:layout_below="@+id/addPokemon"
+   			android:layout_above="@+id/deleteTeam">   
+		   
+		   <RelativeLayout
+	            android:layout_width="match_parent"
+	    		android:layout_height="wrap_content"
+	    		android:paddingBottom="5dp"
+	    		android:paddingLeft="5dp"
+	    		android:paddingRight="5dp"
+	    		android:paddingTop="5dp" >
+			  
+		       <TextView
+			        android:id="@+id/advTitle"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_alignParentRight="true"
+			        android:paddingTop="5dp"
+			        android:text="Advantage Against:"
+			        android:textSize="14sp"
+			        android:textStyle="bold" />
+			    
+			    <TextView
+			        android:id="@+id/advantages"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_alignParentRight="true"
+			        android:layout_below="@+id/advTitle"
+			        android:paddingTop="5dp"
+			        android:text="Advantages Details" />
+			    
+			    <TextView
+			        android:id="@+id/disadvTitle"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_alignParentRight="true"
+			        android:layout_below="@+id/advantages"
+			        android:paddingTop="5dp"
+			        android:text="Disadvantage Against:"
+			        android:textSize="14sp"
+			        android:textStyle="bold" />
+			    
+			    <TextView
+			        android:id="@+id/disadvantages"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentLeft="true"
+			        android:layout_alignParentRight="true"
+			        android:layout_below="@+id/disadvTitle"
+			        android:paddingTop="5dp"
+			        android:text="Disadvantages Details" />
+			       
+			    </RelativeLayout>
+	    </ScrollView>
+
+    	<Button
+			android:id="@+id/deleteTeam"
+		    android:layout_width="match_parent"
+		    android:layout_height="35dp"
+		    android:layout_above="@+id/backtoTeams"
+		    android:text="Delete Team"
+		    android:textSize="12sp"
+		    android:onClick="deleteTeam" />
+    	
+    	<Button
+			android:id="@+id/backtoTeams"
+		    android:layout_width="match_parent"
+		    android:layout_height="35dp"
+		    android:layout_alignParentBottom="true"
+		    android:text="Back to Teams"
+		    android:textSize="12sp"
+		    android:onClick="openTeamsListView" />
+    	
+</RelativeLayout>

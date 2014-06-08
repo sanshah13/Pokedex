@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.pokedex"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/pokeball"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.pokedex.PokemonListActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.pokedex.AllTeamsActivity"
+            android:label="Teams"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.pokedex.PokemonActivity"
+            android:label="Pokemon Information"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.pokedex.MovesActivity"
+            android:label="Moves"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.pokedex.MovesListActivity"
+            android:label="All Moves"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.pokedex.TeamActivity"
+            android:label="Team"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.pokedex.TeamPokemonActivity"
+            android:label="Team Pokemon Information"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/addTeamButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:onClick="createNewTeam"
+        android:text="Add Team"
+        android:textSize="15sp" />
+
+    <ListView
+        android:id="@+id/teamsList"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/viewPokedexButton"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/addTeamButton" />
+
+    <Button
+        android:id="@+id/viewPokedexButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="openPokedexView"
+        android:text="View Pokedex" 
+        android:textSize="15sp"/>
+
+</RelativeLayout>
